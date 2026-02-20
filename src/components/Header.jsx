@@ -1,6 +1,8 @@
 import React from "react";
+import useAuthenStore from "../store/useAuthenStore";
 
 const Header = () => {
+  const { authUser } = useAuthenStore();
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="flex-1">
@@ -15,11 +17,19 @@ const Header = () => {
             <details>
               <summary>Parent</summary>
               <ul className="bg-base-100 rounded-t-none p-2">
+                authUser ?
                 <li>
-                  <a>Link 1</a>
+                  <a>Logout</a>
                 </li>
                 <li>
-                  <a>Link 2</a>
+                  <a>Profile</a>
+                </li>
+                :
+                <li>
+                  <a>Login</a>
+                </li>
+                <li>
+                  <a>signUp</a>
                 </li>
               </ul>
             </details>
