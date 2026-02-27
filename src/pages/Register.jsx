@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Loader2, MessageSquare } from "lucide-react";
-import { useNavigate } from "react-router";
 import toast from "react-hot-toast";
 import useAuthenStore from "../store/useAuthenStore.js";
 
